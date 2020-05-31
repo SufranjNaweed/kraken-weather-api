@@ -1,0 +1,33 @@
+{
+  "name": "weather-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SufranjNaweed/weather-api.git"
+  },
+  "keywords": [
+    "weather",
+    "api",
+    "\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
+    "rest",
+    "api",
+    "opensource"
+  ],
+  "author": "SUFRANJ Naweed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SufranjNaweed/weather-api/issues"
+  },
+  "homepage": "https://github.com/SufranjNaweed/weather-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.5.0"
+  }
+}
