@@ -1,5 +1,5 @@
 # weather-api
-fetch data from  OpenWeather
+fetch data from https://www.weatherapi.com/
 
 
 ### Prerequisites
