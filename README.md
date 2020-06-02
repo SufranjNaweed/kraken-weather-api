@@ -23,3 +23,10 @@ Create a .env file and add the following variable :
   API_URL="OPEN_WEATHER_URL_API"
   API_KEY="YOUR_API_KEY"
 ```
+
+### Documentation
+
+Link to the documentation here : 
+```
+  https://documenter.getpostman.com/view/4377050/SztG3RJX?version=latest
+```
