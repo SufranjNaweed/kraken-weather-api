@@ -11,16 +11,16 @@ In order to use the API you will need:
   https://nodejs.org/en/
 ```
 
-- Get your open weather api key : 
+- Get your weather api key : 
 ```
-  https://openweathermap.org/
+  https://www.weatherapi.com/
 ```
 
 ### Installing
 
 Create a .env file and add the following variable : 
 ```
-  API_URL="OPEN_WEATHER_URL_API"
+  API_URL="WEATHER_URL_API"
   API_KEY="YOUR_API_KEY"
 ```
 
