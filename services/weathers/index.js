@@ -23,27 +23,17 @@ router.post('/', async(req, res) => {
 //  @desc   GET weathers for a given city
 //  @access Public
 
-router.get('/', 
-    [
-        check('city', 'Please include a valide city').exists()
-    ],
+router.get('/:city', 
     async(req, res) => {
-        console.log('get city')
-        const errors = validationResult(req);
-        if (!errors.isEmpty()){
-            return res
-                    .status(400)
-                    .json({errors : errors.array()});
-        }
         try{
-            const { city } = req.body;
+            const city = req.params.city;
             const url = api_url + 'current.json?key=' + api_key + "&q=" + city;
             console.log(url);
             const response = await axios.get(url);
-            return res.status(200).send(response.data);Z
+            return res.status(200).send(response.data);
         }
         catch(err){
-            console.log(err.response.status);
+            console.log(err);
             if (err.response.status == 404){
                 res.status(404).send('City not found.');
             }
@@ -53,21 +43,11 @@ router.get('/',
         }
 });
 
-router.get('/forecast',
-    [
-        check('city', 'Please include a valide city').exists(),
-        check('days', 'Please include a number of days').exists()
-    ],
+router.get('/forecast/:city',
     async(req, res) => {
-        const errors = validationResult(req);
-        if (!errors.isEmpty()){
-            return res
-                    .status(400)
-                    .json({errors : errors.array()});
-        }
         try{
-            const { city, days } = req.body;
-            const url = api_url + "forecast.json?key=" + api_key + "&q=" + city + "&days=" + days;
+            const city = req.params.city;
+            const url = api_url + "forecast.json?key=" + api_key + "&q=" + city + "&days=3";
             const response = await axios.get(url);
             return res.status(200).send(response.data);Z
         }
